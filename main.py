@@ -44,7 +44,7 @@ async def lifespan(app: FastAPI):
     
     # Initialize call repository
     call_repository = CallRepository(database_url=settings.database_url)
-    # await call_repository.initialize()
+    await call_repository.initialize()
     logger.info("Call repository initialized")
     
     logger.info("Application started successfully")

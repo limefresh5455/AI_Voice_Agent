@@ -16,9 +16,9 @@ class RedisStateManager:
     
     def __init__(
         self,
-        redis_url: str = "redis://localhost:6379",
+        redis_url: str = "redis://localhost:6379",  
         ttl_hours: int = 2
-    ):
+    ): 
         self.redis_url = redis_url
         self.ttl_seconds = ttl_hours * 3600
         self.redis_client: Optional[redis.Redis] = None

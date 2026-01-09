@@ -16,7 +16,10 @@ class CallRepository:
     """PostgreSQL-backed call storage"""
     
     def __init__(self, database_url: Optional[str] = None):
-        self.database_url = database_url or settings.database_url
+        # self.database_url = database_url or settings.database_url
+        raw_url = database_url or settings.database_url
+        self.database_url = raw_url.replace("postgresql+asyncpg://", "postgresql://")
+
         self.pool: Optional[asyncpg.Pool] = None
     
     async def initialize(self):
