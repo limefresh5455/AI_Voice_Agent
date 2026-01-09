@@ -9,7 +9,11 @@ from typing import Optional
 from handlers.base import AudioHandler
 from services.deepgram_stt import DeepgramSTTService
 from services.deepgram_tts import DeepgramTTSService
-from services.bedrock_llm import BedrockLLMService
+# from services.bedrock_llm import BedrockLLMService
+from services.openai_llm import OpenAILLMService
+from services.redis_state_manager import RedisStateManager
+
+
 from services.state_manager_inmemory import InMemoryStateManager
 from conversation.flow import ConversationFlow
 from conversation.prompts import build_conversation_prompt
@@ -24,7 +28,7 @@ class AudioPipeline:
     Flow:
     1. Receive audio from handler
     2. Transcribe with Deepgram STT
-    3. Process with Bedrock LLM
+    3. Process with LLM (OpenAI) 
     4. Synthesize with Deepgram TTS
     5. Send audio back to handler
     """
@@ -42,7 +46,8 @@ class AudioPipeline:
         # Initialize services
         self.stt = DeepgramSTTService()
         self.tts = DeepgramTTSService()
-        self.llm = BedrockLLMService()
+        # self.llm = BedrockLLMService()
+        self.llm = OpenAILLMService() 
         
         # Conversation flow
         self.flow = ConversationFlow()

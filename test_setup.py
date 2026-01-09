@@ -21,8 +21,11 @@ async def test_imports():
         
         from services.deepgram_stt import DeepgramSTTService
         from services.deepgram_tts import DeepgramTTSService
-        from services.bedrock_llm import BedrockLLMService
-        from services.state_manager_inmemory import InMemoryStateManager
+        # from services.bedrock_llm import BedrockLLMService
+        # from services.state_manager_inmemory import InMemoryStateManager
+        from services.openai_llm import OpenAILLMService
+        from services.redis_state_manager import RedisStateManager
+
         print("✅ Services OK")
         
         from conversation.flow import ConversationFlow
@@ -48,8 +51,10 @@ async def test_config():
         # Check required settings
         required = [
             'deepgram_api_key',
-            'aws_region',
-            'aws_bedrock_model_id',
+            # 'aws_region',
+            # 'aws_bedrock_model_id',
+            'openai_api_key',
+            'redis_url',
         ]
         
         missing = []
@@ -64,8 +69,11 @@ async def test_config():
             return False
         
         print(f"✅ Environment: {settings.environment}")
-        print(f"✅ AWS Region: {settings.aws_region}")
-        print(f"✅ Bedrock Model: {settings.aws_bedrock_model_id}")
+        # print(f"✅ AWS Region: {settings.aws_region}")
+        # print(f"✅ Bedrock Model: {settings.aws_bedrock_model_id}")
+        print("✅ OpenAI API Key loaded")
+        print(f"✅ Redis URL: {settings.redis_url}")
+
         print(f"✅ Database URL: {settings.database_url}")
         
         return True
@@ -100,7 +108,34 @@ async def test_deepgram():
         return False
 
 
-async def test_bedrock():
+# async def test_bedrock():
+async def test_openai():
+    """Test OpenAI connection."""
+    print("\n🧪 Testing OpenAI connection...")
+    
+    try:
+        from services.openai_llm import OpenAILLMService
+        
+        llm = OpenAILLMService()
+        
+        response = await llm.generate(
+            messages=[{"role": "user", "content": "Say 'test successful'"}],
+            max_tokens=50
+        )
+        
+        if response and response.get("content"):
+            print("✅ OpenAI LLM OK")
+            print(f"   Response: {response['content'][:100]}...")
+            return True
+        else:
+            print("❌ OpenAI returned empty response")
+            return False
+            
+    except Exception as e:
+        print(f"❌ OpenAI error: {e}")
+        print("   Check your OPENAI_API_KEY in .env")
+        return False
+
     """Test AWS Bedrock connection."""
     print("\n🧪 Testing AWS Bedrock connection...")
     
@@ -130,34 +165,63 @@ async def test_bedrock():
         return False
 
 
+# async def test_state_manager():
+#     """Test in-memory state manager."""
+#     print("\n🧪 Testing state manager...")
+    
+#     try:
+#         # from services.state_manager_inmemory import InMemoryStateManager
+#         from services.redis_state_manager import RedisStateManager
+
+#         manager = InMemoryStateManager()
+#         await manager.initialize()
+        
+#         # Try to set and get a value
+#         test_session = "test-session-123"
+#         await manager.initialize_session(test_session, {"test": True})
+        
+#         state = await manager.get_state(test_session)
+        
+#         if state and state.get('session_id') == test_session:
+#             print("✅ State manager OK (in-memory)")
+#             await manager.close()
+#             return True
+#         else:
+#             print("❌ State not saved correctly")
+#             return False
+            
+#     except Exception as e:
+#         print(f"❌ State manager error: {e}")
+#         return False
+
 async def test_state_manager():
-    """Test in-memory state manager."""
-    print("\n🧪 Testing state manager...")
+    """Test Redis state manager."""
+    print("\n🧪 Testing Redis state manager...")
     
     try:
-        from services.state_manager_inmemory import InMemoryStateManager
+        from services.redis_state_manager import RedisStateManager
+        from config import settings
         
-        manager = InMemoryStateManager()
+        manager = RedisStateManager(redis_url=settings.redis_url)
         await manager.initialize()
         
-        # Try to set and get a value
         test_session = "test-session-123"
-        await manager.initialize_session(test_session, {"test": True})
+        await manager.initialize_session(test_session)
         
         state = await manager.get_state(test_session)
         
-        if state and state.get('session_id') == test_session:
-            print("✅ State manager OK (in-memory)")
+        if state and state.get("session_id") == test_session:
+            print("✅ Redis state manager OK")
             await manager.close()
             return True
         else:
-            print("❌ State not saved correctly")
+            print("❌ Redis state not saved correctly")
             return False
             
     except Exception as e:
-        print(f"❌ State manager error: {e}")
+        print(f"❌ Redis error: {e}")
+        print("   Make sure Redis is running")
         return False
-
 
 async def main():
     """Run all tests."""
@@ -173,7 +237,10 @@ async def main():
     # Only test APIs if config is OK
     if results['config']:
         results['deepgram'] = await test_deepgram()
-        results['bedrock'] = await test_bedrock()
+        # results['bedrock'] = await test_bedrock()
+        results['openai'] = await test_openai()
+
+        results['openai'] = await test_openai()
         results['state_manager'] = await test_state_manager()
     
     # Summary

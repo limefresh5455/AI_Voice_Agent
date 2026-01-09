@@ -29,6 +29,10 @@ class Settings(BaseSettings):
         default="deepseek.deepseek-r1-distill-qwen-32b",
         env="AWS_BEDROCK_MODEL_ID"
     )
+
+    #OPEN AI 
+    openai_api_key: str
+
     
     # Database
     database_url: str = Field(
