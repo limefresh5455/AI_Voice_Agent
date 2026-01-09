@@ -33,7 +33,6 @@ class BedrockLLMService:
         self.model_id = model_id or settings.aws_bedrock_model_id
         self.region = region or settings.aws_region
         
-        # Configure boto3 client for lower latency
         config = Config(
             region_name=self.region,
             retries={'max_attempts': 2, 'mode': 'adaptive'},
