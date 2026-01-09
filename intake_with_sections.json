@@ -1,0 +1,4139 @@
+{
+  "object": "Intake__c",
+  "label": "Intake",
+  "fields": [
+    {
+      "api_name": "COA_98_6__c",
+      "label": "Retal. in Violation of 98.6",
+      "type": "boolean",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Causes of Action"
+    },
+    {
+      "api_name": "Client_Address__c",
+      "label": "Client Address",
+      "type": "address",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Client Contact Information"
+    },
+    {
+      "api_name": "Client_Email__c",
+      "label": "Client Email",
+      "type": "email",
+      "required": false,
+      "help_text": null,
+      "length": 80,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Client Contact Information"
+    },
+    {
+      "api_name": "Client_Name__c",
+      "label": "Client Name",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Client Contact Information"
+    },
+    {
+      "api_name": "Client_Phone_Number__c",
+      "label": "Client Phone Number",
+      "type": "phone",
+      "required": false,
+      "help_text": null,
+      "length": 40,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Client Contact Information"
+    },
+    {
+      "api_name": "Date_Of_Birth__c",
+      "label": "Date Of Birth",
+      "type": "date",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Client Contact Information"
+    },
+    {
+      "api_name": "Last_4_digits_of_Social_Security__c",
+      "label": "Last 4 digits of Social Security Number",
+      "type": "string",
+      "required": false,
+      "help_text": "If they do not have a SSN, please enter \"0000\"",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Client Contact Information"
+    },
+    {
+      "api_name": "What_is_your_relationship_status__c",
+      "label": "What is your relationship status?",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Single",
+          "label": "Single",
+          "default": false
+        },
+        {
+          "value": "Married",
+          "label": "Married",
+          "default": false
+        },
+        {
+          "value": "Divorced",
+          "label": "Divorced",
+          "default": false
+        },
+        {
+          "value": "Separated",
+          "label": "Separated",
+          "default": false
+        },
+        {
+          "value": "In A Relationship",
+          "label": "In A Relationship",
+          "default": false
+        },
+        {
+          "value": "Widowed",
+          "label": "Widowed",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Client Contact Information"
+    },
+    {
+      "api_name": "Corporate_Location__c",
+      "label": "Corporate Location",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Does your employer have a corporate location that is different from the location you worked at?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unsure",
+          "label": "Unsure",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Defendant Information"
+    },
+    {
+      "api_name": "Do_you_know_who_the_owner_is__c",
+      "label": "Do you know who the owner is?",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unsure",
+          "label": "Unsure",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Defendant Information"
+    },
+    {
+      "api_name": "Employer_Address__c",
+      "label": "Employer Address",
+      "type": "address",
+      "required": false,
+      "help_text": "What is the address of the employer / business?",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Defendant Information"
+    },
+    {
+      "api_name": "Employer_s_Name_On_Paystub__c",
+      "label": "Employer Operating Name",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Does your employer operate under a different name than the name listed on your paycheck?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unsure",
+          "label": "Unsure",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Defendant Information"
+    },
+    {
+      "api_name": "Is_your_employer_a_Franchise__c",
+      "label": "Is your employer a Franchise?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Do you know if your employer is a franchise?  (A franchise is a business arrangement where a person or business buys the right to sell a company's products or services under their name and business model)\r\nEx: McDonald's, Dunkin' Donuts, Pizza Hut, Taco Bell, Domino's",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unsure",
+          "label": "Unsure",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Defendant Information"
+    },
+    {
+      "api_name": "Name_Of_Employer__c",
+      "label": "Name Of Employer",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Defendant Information"
+    },
+    {
+      "api_name": "Owner_Email__c",
+      "label": "Owner Email",
+      "type": "email",
+      "required": false,
+      "help_text": null,
+      "length": 80,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Defendant Information"
+    },
+    {
+      "api_name": "Owner_Phone_Number__c",
+      "label": "Owner Phone Number",
+      "type": "phone",
+      "required": false,
+      "help_text": null,
+      "length": 40,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Defendant Information"
+    },
+    {
+      "api_name": "Annual_Salary_Formula__c",
+      "label": "Annual Salary Formula",
+      "type": "currency",
+      "required": false,
+      "help_text": "Calculates Salary Amount using Hourly Rate",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Demand Calculations"
+    },
+    {
+      "api_name": "Hourly_Rate_Formula__c",
+      "label": "Hourly Rate Formula",
+      "type": "currency",
+      "required": false,
+      "help_text": "Calculates Hourly Rate Using Salary Amount",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Demand Calculations"
+    },
+    {
+      "api_name": "Months_Of_Employment__c",
+      "label": "Months Of Employment",
+      "type": "double",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Demand Calculations"
+    },
+    {
+      "api_name": "Number_of_Days_Worked__c",
+      "label": "Number of Days Worked",
+      "type": "double",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Demand Calculations"
+    },
+    {
+      "api_name": "Today_s_Date__c",
+      "label": "Today's Date",
+      "type": "date",
+      "required": false,
+      "help_text": "Calculates Today's Date",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Demand Calculations"
+    },
+    {
+      "api_name": "Email__c",
+      "label": "Email",
+      "type": "email",
+      "required": false,
+      "help_text": "Emergency Contact Email",
+      "length": 80,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Emergency Contact"
+    },
+    {
+      "api_name": "Name__c",
+      "label": "Name",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Emergency Contact Name",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Emergency Contact"
+    },
+    {
+      "api_name": "Phone_Number__c",
+      "label": "Phone Number",
+      "type": "phone",
+      "required": false,
+      "help_text": "Emergency Contact Phone Number",
+      "length": 40,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Emergency Contact"
+    },
+    {
+      "api_name": "Relationship_to_client_c__c",
+      "label": "Relationship To Client",
+      "type": "textarea",
+      "required": false,
+      "help_text": "What is your relationship to your emergency contact?",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Emergency Contact"
+    },
+    {
+      "api_name": "X1099_Misclassification__c",
+      "label": "1099 Misclassification",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Do you believe you were misclassified as an independent contractor?\r\n\r\nEx: Were you free from the control and direction of your employer? Did you set your own schedule/assignments? Did you perform work that was outside of the line of business?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "X1099_Misclassification_Notes__c",
+      "label": "1099 Misclassification Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please describe how you felt you were misclassified as an independent contractor (1099)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Address_Of_Location_Worked_At__c",
+      "label": "Address Of Location Worked At",
+      "type": "address",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Annual_Salary__c",
+      "label": "Annual Salary",
+      "type": "double",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Current_Employment_Status__c",
+      "label": "Current Employment Status",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Employed",
+          "label": "Employed",
+          "default": false
+        },
+        {
+          "value": "Unemployed",
+          "label": "Unemployed",
+          "default": false
+        },
+        {
+          "value": "Laid Off",
+          "label": "Laid Off",
+          "default": false
+        },
+        {
+          "value": "Suspended",
+          "label": "Suspended",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Describe_all_of_your_job_duties__c",
+      "label": "Describe all of your job duties",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please describe all of your job duties (aka day to day tasks and responsibilities)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Did_you_supervise_any_other_employees__c",
+      "label": "Did you supervise any other employees?",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Employee_or_Independent_Contractor__c",
+      "label": "Employee or Independent Contractor?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Are you a W2 employee or 1099 Independent Contractor?\r\n\r\nEx: An employee works directly for the company, following their instructions and receiving benefits like health insurance, while an independent contractor is self-employed, sets their own work schedule, and is typically hired for specific projects with less company control over how they work.",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Employee (W2)",
+          "label": "Employee (W2)",
+          "default": false
+        },
+        {
+          "value": "Independent Contractor (1099)",
+          "label": "Independent Contractor (1099)",
+          "default": false
+        },
+        {
+          "value": "Other",
+          "label": "Other",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Hourly_Or_Salary__c",
+      "label": "Hourly Or Salary?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Are you an hourly or salaried employee?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Hourly",
+          "label": "Hourly",
+          "default": false
+        },
+        {
+          "value": "Salary",
+          "label": "Salary",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Hourly_Rate__c",
+      "label": "Hourly Rate",
+      "type": "double",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Hours_Worked_per_Week__c",
+      "label": "Hours Worked per Week",
+      "type": "double",
+      "required": false,
+      "help_text": "This field allows users to input the average number of hours worked per week, which can vary depending on full-time or part-time status.",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Position_Title__c",
+      "label": "Position Title",
+      "type": "textarea",
+      "required": false,
+      "help_text": "What was your position title(s) while employed there?",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Union_Grievance__c",
+      "label": "Union Grievance",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you file any grievances with the union in regards to your complaints/issues?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Union_Grievance_Notes__c",
+      "label": "Union Grievance Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": "If you did file a grievance with the union:\r\nWhen?\r\nFor what Occurrence?\r\nWho did you talk to (Name & Position)?\r\nWhat was the outcome? \r\nWas it resolved?",
+      "length": 3000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Union_Member__c",
+      "label": "Were you a union member?",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unsure",
+          "label": "Unsure",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Employment Information"
+    },
+    {
+      "api_name": "Are_you_still_working_for_this_employer__c",
+      "label": "Are you still working for this employer?",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Other",
+          "label": "Other",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Employment Timeline"
+    },
+    {
+      "api_name": "Last_Date_of_Employment__c",
+      "label": "Last Date of Employment",
+      "type": "date",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Employment Timeline"
+    },
+    {
+      "api_name": "Previous_Lawsuit_With_Employer__c",
+      "label": "Previous Lawsuit With Employer?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Have you ever been involved in a lawsuit with this employer before?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Never",
+          "label": "Never",
+          "default": false
+        },
+        {
+          "value": "For Another Claim",
+          "label": "For Another Claim",
+          "default": false
+        },
+        {
+          "value": "For This Claim",
+          "label": "For This Claim",
+          "default": false
+        },
+        {
+          "value": "Settled This",
+          "label": "Settled This",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Employment Timeline"
+    },
+    {
+      "api_name": "Start_Date_of_Employment__c",
+      "label": "Start Date of Employment",
+      "type": "date",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Employment Timeline"
+    },
+    {
+      "api_name": "Age_40_or_over__c",
+      "label": "Age (40 or over)",
+      "type": "boolean",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Ancestry_or_National_Origin__c",
+      "label": "Ancestry or National Origin",
+      "type": "boolean",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "FEHA__c",
+      "label": "FEHA",
+      "type": "picklist",
+      "required": false,
+      "help_text": "During your employment, did you ever feel like you were treated differently by your employer (aka discriminated, harassed, or retaliated against?)",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Gender_Identity_or_Expression__c",
+      "label": "Gender Identity or Expression",
+      "type": "boolean",
+      "required": false,
+      "help_text": "This refers to a person's innate sense of their gender or the way in which a person expresses a gender identity, typically through their appearance, dress, and behavior.",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Genetic_Information__c",
+      "label": "Genetic Information",
+      "type": "boolean",
+      "required": false,
+      "help_text": "This can include information about any disease, disorder, or condition of your family members (your family medical history).",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Age_why__c",
+      "label": "If YES to Age, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your AGE? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Ancestry_Origin_why__c",
+      "label": "If YES to Ancestry/Origin, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your ANCESTRY? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_FEHA_why__c",
+      "label": "If YES to FEHA, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "If the answer to FEHA is yes - find out specifics and ask client if it was in regards to any protected class. Protected classes include Race/Color, Ancestry, Religion, Age (40 and over), Disability (physical and mental), Sex/Gender (including pregnancy, childbirth, breastfeeding, or related medical conditions), Sexual orientation, Gender identity/expression, Medical condition, Genetic information, Marital status, Military or Veteran status",
+      "length": 10000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Gender_ID_why__c",
+      "label": "If YES to Gender ID, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your GENDER ID? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Genetic_Info_why__c",
+      "label": "If YES to Genetic Info, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your GENETIC INFORMATION? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Marital_Status_why__c",
+      "label": "If YES to Marital Status, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your MARITAL STATUS? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Medical_Condition_why__c",
+      "label": "If YES to Medical Condition, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your MEDICAL CONDITION? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Mental_Disability_why__c",
+      "label": "If YES to Mental Disability, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your MENTAL DISABILITY? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Military_Status_why__c",
+      "label": "If YES to Military Status, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your MILITARY STATUS? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Physical_Disability_why__c",
+      "label": "If YES to Physical Disability, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your PHYSICAL DISABILITY? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Race_or_Color_why__c",
+      "label": "If YES to Race or Color, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your RACE or COLOR? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Religion_why__c",
+      "label": "If YES to Religion, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your RELIGION? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Sex_Gender_why__c",
+      "label": "If YES to Sex/Gender, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your SEX or GENDER? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "If_YES_to_Sexual_Orientation_why__c",
+      "label": "If YES to Sexual Orientation, why?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Did you experience discrimination as a result of your SEXUAL ORIENTATION? (Ex. not offered advancement or promotion; excluded from things, or demoted or terminated)",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Marital_Status__c",
+      "label": "Marital Status",
+      "type": "boolean",
+      "required": false,
+      "help_text": "A person's state of being single, married, separated, divorced, or widowed.",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Medical_Condition__c",
+      "label": "Medical Condition",
+      "type": "boolean",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Mental_Disability__c",
+      "label": "Mental Disability",
+      "type": "boolean",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Military_or_Veteran_Status__c",
+      "label": "Military or Veteran Status",
+      "type": "boolean",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Physical_Disability__c",
+      "label": "Physical Disability",
+      "type": "boolean",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Race_Color__c",
+      "label": "Race or Color",
+      "type": "boolean",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Religion__c",
+      "label": "Religion",
+      "type": "boolean",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Sex_or_Gender__c",
+      "label": "Sex or Gender",
+      "type": "boolean",
+      "required": false,
+      "help_text": "This can include pregnancy, childbirth, breastfeeding, or related medical conditions.",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Sexual_Orientation__c",
+      "label": "Sexual Orientation",
+      "type": "boolean",
+      "required": false,
+      "help_text": "This refers to a person's identity in relation to the gender or genders to which they are sexually attracted; the fact of being heterosexual, homosexual, etc.",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "FEHA"
+    },
+    {
+      "api_name": "Govt_employee__c",
+      "label": "Are you a government employee?",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Initial Intake Vetting"
+    },
+    {
+      "api_name": "Current_Representation__c",
+      "label": "Current/Past Representation",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Have you signed any retainer agreements with any other attorneys to assist you with this matter? Are you already being represented by another attorney regarding these claims?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Pending Disengagement",
+          "label": "Pending Disengagement",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Initial Intake Vetting"
+    },
+    {
+      "api_name": "Do_you_work_for_the_military__c",
+      "label": "Do you work for the military?",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Initial Intake Vetting"
+    },
+    {
+      "api_name": "Indian_Reservation__c",
+      "label": "Do you work on an Indian reservation?",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Initial Intake Vetting"
+    },
+    {
+      "api_name": "What_date_did_you_start_your_employment__c",
+      "label": "What date did you start your employment?",
+      "type": "date",
+      "required": false,
+      "help_text": "Please list the most accurate date when the employment began.",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Initial Intake Vetting"
+    },
+    {
+      "api_name": "What_was_the_last_day_you_worked__c",
+      "label": "What was the last day you worked?",
+      "type": "date",
+      "required": false,
+      "help_text": "Please list the approximate last day of work (get the most accurate date from the client)",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Initial Intake Vetting"
+    },
+    {
+      "api_name": "File_complaints_with_any_agencies__c",
+      "label": "File complaints with any agencies?",
+      "type": "multipicklist",
+      "required": false,
+      "help_text": "Have you filed any complaints with any of the following agencies? This could have been while you were employed or after you were no longer employed.",
+      "length": 4099,
+      "picklist_values": [
+        {
+          "value": "None",
+          "label": "None",
+          "default": false
+        },
+        {
+          "value": "Department of Fair Employment and Housing (DFEH)",
+          "label": "Department of Fair Employment and Housing (DFEH)",
+          "default": false
+        },
+        {
+          "value": "Equal Employment Opportunity Commission (EEOC)",
+          "label": "Equal Employment Opportunity Commission (EEOC)",
+          "default": false
+        },
+        {
+          "value": "Civil Rights Office",
+          "label": "Civil Rights Office",
+          "default": false
+        },
+        {
+          "value": "Occupational Safety and Health Administration (OSHA)",
+          "label": "Occupational Safety and Health Administration (OSHA)",
+          "default": false
+        },
+        {
+          "value": "Labor Commissioner",
+          "label": "Labor Commissioner",
+          "default": false
+        },
+        {
+          "value": "Other",
+          "label": "Other",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Miscellaneous Complaints"
+    },
+    {
+      "api_name": "Current_Rate_Of_Pay__c",
+      "label": "Current Rate Of Pay",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please list the current rate of pay - either hourly or salary and the rate per hour / year.",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "New Employment Since Termination"
+    },
+    {
+      "api_name": "New_Employment_Position__c",
+      "label": "New Employment Position",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "New Employment Since Termination"
+    },
+    {
+      "api_name": "New_Job_Since_Employment_Ended__c",
+      "label": "New Job Since Employment Ended?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Have you started a new job since your employment ended?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "New Employment Since Termination"
+    },
+    {
+      "api_name": "When_was_your_official_start_date__c",
+      "label": "When was your official start date?",
+      "type": "date",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "New Employment Since Termination"
+    },
+    {
+      "api_name": "Where_are_you_currently_working__c",
+      "label": "Where are you currently working?",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "New Employment Since Termination"
+    },
+    {
+      "api_name": "Average_Unpaid_Overtime_Hours_Per_Week__c",
+      "label": "Average Unpaid Overtime Hours Per Week",
+      "type": "textarea",
+      "required": false,
+      "help_text": "How many hours over UNPAID overtime did you work per week?",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Daily_Overtime__c",
+      "label": "Daily Overtime",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you ever work more than 8 hours in a day OR more than 40 hours per week?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Daily_Overtime_Complaint_Resolved__c",
+      "label": "Daily Overtime Complaint Resolved?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "After making a complaint about not seeing overtime pay after working more than 8 hours per day, did the issue get resolved?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Daily_Overtime_Frequency_Per_Week__c",
+      "label": "Daily Overtime Frequency Per Week",
+      "type": "double",
+      "required": false,
+      "help_text": "How many days ON AVERAGE per week would you work more than 8 hours per day?",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Daily_Overtime_Pay_Complaints__c",
+      "label": "Daily Overtime Pay Complaints?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you ever make any complaints about not receiving overtime pay after working more than 8 hours in a day?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Daily_Overtime_Pay__c",
+      "label": "Daily Overtime Pay?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "For the days where you worked more than 8 hours per day, were you paid overtime wages? (Overtime wages are equal to 1.5 times your regular hourly rate of pay)",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Form_Of_Complaint_Daily_Overtime__c",
+      "label": "Form Of Complaint (Daily Overtime)",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Verbal",
+          "label": "Verbal",
+          "default": false
+        },
+        {
+          "value": "Written",
+          "label": "Written",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Form_Of_Complaint_Weekly_Overtime__c",
+      "label": "Form Of Complaint (Weekly Overtime)",
+      "type": "picklist",
+      "required": false,
+      "help_text": "How did your make your complaint?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Verbal",
+          "label": "Verbal",
+          "default": false
+        },
+        {
+          "value": "Written",
+          "label": "Written",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Weekly_Overtime__c",
+      "label": "Weekly Overtime",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you ever work more than 40 hours per week?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Weekly_Overtime_Complaint_Resolved__c",
+      "label": "Weekly Overtime Complaint Resolved?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "When you made a complaint about not getting overtime pay after working over 40 hours in a week, was your complaint resolved?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Weekly_Overtime_Frequency_Per_Year__c",
+      "label": "Weekly Overtime Frequency Per Year",
+      "type": "double",
+      "required": false,
+      "help_text": "How many times ON AVERAGE per year would you say you worked more than 40 hours in a week?",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Weekly_Overtime_Pay_Complaints__c",
+      "label": "Weekly Overtime Pay Complaints?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "If you did not receive overtime pay when working more than 40 hours in a week, did you make any complaints?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Weekly_Overtime_Pay__c",
+      "label": "Weekly Overtime Pay?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "For the times where you worked more than 40 hours in a week, were you paid overtime wages? (Overtime wages are equal to 1.5 times your regular hourly rate of pay)",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Overtime Pay"
+    },
+    {
+      "api_name": "Additional_Comments__c",
+      "label": "Additional Comments",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Space for the individual to provide any additional context or details about the incident or experience.",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Bankruptcy_Notes__c",
+      "label": "Bankruptcy Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please detail when you went into bankruptcy and for what reason.",
+      "length": 1000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Bonus_Pay_Notes__c",
+      "label": "Bonus Pay Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please list any additional notes regarding bonus pay / commission as needed.",
+      "length": 2000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Call_Summary__c",
+      "label": "Call Summary",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 10000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Causes_of_Action__c",
+      "label": "Causes of Action",
+      "type": "multipicklist",
+      "required": false,
+      "help_text": null,
+      "length": 4099,
+      "picklist_values": [
+        {
+          "value": "Retaliation in Violation of Labor Code Section 98.6",
+          "label": "Retaliation in Violation of Labor Code Section 98.6",
+          "default": false
+        },
+        {
+          "value": "Retaliation in Violation of Labor Code Section 1102.5",
+          "label": "Retaliation in Violation of Labor Code Section 1102.5",
+          "default": false
+        },
+        {
+          "value": "Harassment in Violation of FEHA",
+          "label": "Harassment in Violation of FEHA",
+          "default": false
+        },
+        {
+          "value": "Discrimination in Violation of FEHA",
+          "label": "Discrimination in Violation of FEHA",
+          "default": false
+        },
+        {
+          "value": "Retaliation in Violation of FEHA",
+          "label": "Retaliation in Violation of FEHA",
+          "default": false
+        },
+        {
+          "value": "Failure to Accommodate in Violation of FEHA",
+          "label": "Failure to Accommodate in Violation of FEHA",
+          "default": false
+        },
+        {
+          "value": "Failure to Engage in the Good Faith Interactive Process in Violation of FEHA",
+          "label": "Failure to Engage in the Good Faith Interactive Process in Violation of FEHA",
+          "default": false
+        },
+        {
+          "value": "Wrongful Termination in Violation of Public Policy",
+          "label": "Wrongful Termination in Violation of Public Policy",
+          "default": false
+        },
+        {
+          "value": "Failure to Provide Earned/Overtime Wages",
+          "label": "Failure to Provide Earned/Overtime Wages",
+          "default": false
+        },
+        {
+          "value": "Failure to Pay Wages Due Upon Termination, Waiting Time Penalties",
+          "label": "Failure to Pay Wages Due Upon Termination, Waiting Time Penalties",
+          "default": false
+        },
+        {
+          "value": "Failure to Issue Accurate and Itemized Wage Statements",
+          "label": "Failure to Issue Accurate and Itemized Wage Statements",
+          "default": false
+        },
+        {
+          "value": "Failure to Provide Meal Periods",
+          "label": "Failure to Provide Meal Periods",
+          "default": false
+        },
+        {
+          "value": "Failure to Provide Rest Breaks",
+          "label": "Failure to Provide Rest Breaks",
+          "default": false
+        },
+        {
+          "value": "Failure to Indemnify",
+          "label": "Failure to Indemnify",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Demotion_s_Explanation__c",
+      "label": "Demotion(s) Explanation",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please describe the details surrounding the demotions you received. Who demoted you? What were you demoted to? Why were you demoted?",
+      "length": 3000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Details_of_Different_Treatment__c",
+      "label": "Details of Different Treatment",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Explain how your treatment changed after the report (e.g., demotion, suspension).",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Details_of_Schedule_Variations__c",
+      "label": "Details of Schedule Variations",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Describe any changes to your regular schedule, including the reasons (e.g., shift swap, unexpected overtime, emergency coverage).",
+      "length": 2000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Felony_Notes__c",
+      "label": "Felony Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": "When were you convicted of a felony and why?",
+      "length": 1000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Final_Paycheck_Notes__c",
+      "label": "Final Paycheck Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please list any additional notes regarding the final paycheck if necessary.",
+      "length": 3000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "How_Was_the_Issue_Handled__c",
+      "label": "How Was the Issue Handled?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Describe what the company or relevant person did after you reported it (e.g., investigation, meeting).",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Interrupted_Meal_Period_Reason__c",
+      "label": "Interrupted Meal Period Reason",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please list the reason(s) why you were unable to take a lunch break that was uninterrupted.",
+      "length": 3000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Issues_With_Pay_Notes__c",
+      "label": "Issues With Pay Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please list any additional pay notes / issues that happened during your employment.",
+      "length": 4000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Late_Meal_Periods_Reason__c",
+      "label": "Late Meal Periods Reason",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 3000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Pay_Notes__c",
+      "label": "Pay Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please list any additional pay rate notes if necessary.",
+      "length": 2000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Personal_Equipment_Used_for_Work__c",
+      "label": "Personal Equipment Used for Work",
+      "type": "multipicklist",
+      "required": false,
+      "help_text": null,
+      "length": 4099,
+      "picklist_values": [
+        {
+          "value": "None",
+          "label": "None",
+          "default": false
+        },
+        {
+          "value": "Phone",
+          "label": "Phone",
+          "default": false
+        },
+        {
+          "value": "Computer",
+          "label": "Computer",
+          "default": false
+        },
+        {
+          "value": "Car",
+          "label": "Car",
+          "default": false
+        },
+        {
+          "value": "Protective Gear",
+          "label": "Protective Gear",
+          "default": false
+        },
+        {
+          "value": "Uniform",
+          "label": "Uniform",
+          "default": false
+        },
+        {
+          "value": "Not Listed",
+          "label": "Not Listed",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Personal_Property_Purpose__c",
+      "label": "Personal Property Purpose",
+      "type": "textarea",
+      "required": false,
+      "help_text": "For each of the items listed above, please describe the purpose for each (e.g., cell phone for work calls, vehicle for business travel, home office for remote work).",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Reason_for_Medical_Family_Leave__c",
+      "label": "Reason for Medical/Family Leave",
+      "type": "textarea",
+      "required": false,
+      "help_text": "The reason for your medical or family leave (e.g., caring for a family member, personal medical issue).",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Reason_for_Sick_Leave__c",
+      "label": "Reason for Sick Leave",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Why you needed to take sick leave (e.g., illness, injury, medical appointment).",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Treatment_After_Sick_Leave_Details__c",
+      "label": "Treatment After Sick Leave Details",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please describe how you were treated differently after taking sick leave? BE SPECIFIC. Who treated you differently? What was the treatment? How often did this occur?",
+      "length": 4000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Unpaid_Regular_Hours_Notes__c",
+      "label": "Unpaid Regular Hours Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please list any important clarifying details surrounding the pay that was not provided for regular hours worked.",
+      "length": 2000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "What_Did_You_Report__c",
+      "label": "What Did You Witness/Report?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Briefly describe the issue you reported (e.g., harassment, discrimination, unsafe work practices).",
+      "length": 7000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "What_Was_Their_Response_to_Your_Request__c",
+      "label": "What Was Their Response to Your Request?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Describe what happened after you requested medical or family leave (e.g., approved, denied, asked for more information).",
+      "length": 3000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Write_Up_Explanation__c",
+      "label": "Write Up Explanation",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please list the details surrounding the write up(s) received during your employment. Who, what, how? What was the outcome?",
+      "length": 3000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Personal Property"
+    },
+    {
+      "api_name": "Form_Of_Complaint_Unpaid_Regular_Hours__c",
+      "label": "Form Of Complaint (Unpaid Regular Hours)",
+      "type": "picklist",
+      "required": false,
+      "help_text": "How did you complain?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Verbal",
+          "label": "Verbal",
+          "default": false
+        },
+        {
+          "value": "Written",
+          "label": "Written",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Regular Time Pay"
+    },
+    {
+      "api_name": "Form_Of_Complaint_Work_Off_The_Clock__c",
+      "label": "Form Of Complaint (Work Off The Clock)",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Verbal",
+          "label": "Verbal",
+          "default": false
+        },
+        {
+          "value": "Written",
+          "label": "Written",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Regular Time Pay"
+    },
+    {
+      "api_name": "Unpaid_Regular_Hours__c",
+      "label": "Unpaid Regular Hours",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Are there any wages (not including overtime) that your employer did not pay you for?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unsure",
+          "label": "Unsure",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Regular Time Pay"
+    },
+    {
+      "api_name": "Unpaid_Regular_Hours_Complaint__c",
+      "label": "Unpaid Regular Hours Complaint",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you ever complain to a manager or supervisor regarding your unpaid regular hours?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Regular Time Pay"
+    },
+    {
+      "api_name": "Unpaid_Regular_Hours_Complaint_Resolved__c",
+      "label": "Unpaid Regular Hours Complaint Resolved?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "When you made complaints about unpaid regular hours, was the complaint resolved?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Regular Time Pay"
+    },
+    {
+      "api_name": "Work_Off_The_Clock__c",
+      "label": "Work Off The Clock",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you ever perform work before clocking in or after clocking out?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Regular Time Pay"
+    },
+    {
+      "api_name": "Work_Off_The_Clock_Complaint__c",
+      "label": "Work Off The Clock Complaint",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Regular Time Pay"
+    },
+    {
+      "api_name": "Work_Off_The_Clock_Complaint_Resolved__c",
+      "label": "Work Off The Clock Complaint Resolved?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "When you complained about work you had done while not clocked in, was this resolved?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Regular Time Pay"
+    },
+    {
+      "api_name": "Work_Off_The_Clock_Notes__c",
+      "label": "Work Off The Clock Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": "Please describe any further details relating to working off of the clock.",
+      "length": 3000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Regular Time Pay"
+    },
+    {
+      "api_name": "Resignation_Explanation__c",
+      "label": "Resignation Explanation",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Resignation Details"
+    },
+    {
+      "api_name": "Resignation_Explanation_Notes__c",
+      "label": "Resignation Explanation Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": "When did you resign (DATE) and what was the reason for this?",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Resignation Details"
+    },
+    {
+      "api_name": "Able_To_Take_Rest_Breaks__c",
+      "label": "Able To Take Rest Breaks?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Were you able to take your 10-minute rest breaks for every four hours you worked?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Rest Breaks"
+    },
+    {
+      "api_name": "Complaint_Resolved__c",
+      "label": "Complaint Resolved? (Rest Breaks)",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Rest Breaks"
+    },
+    {
+      "api_name": "Form_Of_Complaint_Rest_Breaks__c",
+      "label": "Form Of Complaint (Rest Breaks)",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Verbal",
+          "label": "Verbal",
+          "default": false
+        },
+        {
+          "value": "Written",
+          "label": "Written",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Rest Breaks"
+    },
+    {
+      "api_name": "Frequency_Of_Rest_Break_Issues_Per_Week__c",
+      "label": "Frequency Of Rest Break Issues Per Week",
+      "type": "double",
+      "required": false,
+      "help_text": "Including rest breaks not provided, interrupted rest breaks, and late rest breaks, how many \"Rest break issues\" did you experience per week?",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Rest Breaks"
+    },
+    {
+      "api_name": "Interrupted_Rest_Breaks__c",
+      "label": "Interrupted Rest Breaks",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Were you ever interrupted while taking your rest breaks?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Rest Breaks"
+    },
+    {
+      "api_name": "Interrupted_Rest_Breaks_Reason__c",
+      "label": "Interrupted Rest Breaks Reason",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 3000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Rest Breaks"
+    },
+    {
+      "api_name": "Late_Rest_Breaks__c",
+      "label": "Late Rest Breaks",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Were your rest breaks ever taken late, meaning after four hours of work?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Rest Breaks"
+    },
+    {
+      "api_name": "Late_Rest_Breaks_Reason__c",
+      "label": "Late Rest Breaks Reason",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 3000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Rest Breaks"
+    },
+    {
+      "api_name": "Rest_Break_Penalties_Complaints__c",
+      "label": "Rest Break Penalties Complaints",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Rest Breaks"
+    },
+    {
+      "api_name": "Rest_Breaks_Penalties__c",
+      "label": "Rest Breaks Penalties",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did your employer pay you rest break penalties/pay on your paycheck for each missed, late, or interrupted rest break?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Rest Breaks"
+    },
+    {
+      "api_name": "Unable_To_Take_Rest_Breaks_Reason__c",
+      "label": "Unable To Take Rest Breaks Reason",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 3000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Rest Breaks"
+    },
+    {
+      "api_name": "Attempt_To_Take_Sick_Leave__c",
+      "label": "Attempt To Take Sick Leave?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Think about whether you asked for sick leave at any time in the last year of your job.",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Attempt_to_Schedule_Medical_Family_Leave__c",
+      "label": "Attempt to Schedule Medical/Family Leave",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Think about whether you requested medical or family leave during your last year of work.",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Average_Work_Off_The_Clock_Hours_Week__c",
+      "label": "Average Unpaid Off The Clock Hours/Week",
+      "type": "double",
+      "required": false,
+      "help_text": "On average, how many hours per week throughout your entire employment did you work off the clock without getting paid? (excluding overtime)",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Average_Unpaid_Regular_Hours_Week__c",
+      "label": "Average Unpaid Regular Hours/Week",
+      "type": "double",
+      "required": false,
+      "help_text": "On average, how many hours per week throughout your entire employment did you work without being paid for regular time (excluding overtime)?",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Cannabis_Medical_Recreational_Use__c",
+      "label": "Cannabis Medical/Recreational Use",
+      "type": "boolean",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Case_Name__c",
+      "label": "Case Name",
+      "type": "string",
+      "required": false,
+      "help_text": null,
+      "length": 1300,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Corporate_Address__c",
+      "label": "Corporate Address",
+      "type": "address",
+      "required": false,
+      "help_text": "Do you know the address of the corporate location? If so please list the address here.",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "CreatedDate",
+      "label": "Created Date",
+      "type": "datetime",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Date_Today__c",
+      "label": "Date Today",
+      "type": "date",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Date_of_Demotion_s__c",
+      "label": "Date of Demotion(s)",
+      "type": "string",
+      "required": false,
+      "help_text": "Please write the date of the demotion(s) you received during your employment.",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Date_of_Incident_s__c",
+      "label": "Date of Incident(s)",
+      "type": "date",
+      "required": false,
+      "help_text": "The date(s) when the incident(s) occurred. This can be a single date or a range if multiple incidents occurred.",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Date_of_Medical_Family_Leave_Request__c",
+      "label": "Date of Medical/Family Leave Request",
+      "type": "date",
+      "required": false,
+      "help_text": "The date when you requested medical or family leave.",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Date_of_Sick_Leave_Request__c",
+      "label": "Date of Sick Leave Request",
+      "type": "date",
+      "required": false,
+      "help_text": "The date when you requested sick leave.",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Date_s_Of_Write_Up_s__c",
+      "label": "Date(s) Of Write Up(s)",
+      "type": "string",
+      "required": false,
+      "help_text": "Please write the date(s) of any write ups you received during your employment.",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Days_Week_Without_Meal_Periods__c",
+      "label": "Days/Week Without Meal Periods",
+      "type": "double",
+      "required": false,
+      "help_text": "How many days in a typical week were you unable to take a proper meal period during your employment?",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Did_You_Report_The_Incident__c",
+      "label": "Did You Report The Incident?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Indicates whether the individual reported the incident to HR or management.",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Different_Treatment_After_Reporting__c",
+      "label": "Different Treatment After Reporting?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did your employer treat you differently after you reported the issue (e.g., fewer hours, pay cut)?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Different_Treatment_After_Sick_Leave__c",
+      "label": "Different Treatment After Sick Leave?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did your employer treat you differently after taking or requesting sick leave?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Frequency_Of_Denied_Meal_Period__c",
+      "label": "Frequency Of Denied Meal Period",
+      "type": "picklist",
+      "required": false,
+      "help_text": "How often were you denied a meal period when working shifts of 6 hours or longer?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Daily",
+          "label": "Daily",
+          "default": false
+        },
+        {
+          "value": "Weekly",
+          "label": "Weekly",
+          "default": false
+        },
+        {
+          "value": "Occasionally",
+          "label": "Occasionally",
+          "default": false
+        },
+        {
+          "value": "Rarely",
+          "label": "Rarely",
+          "default": false
+        },
+        {
+          "value": "Never",
+          "label": "Never",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Frequency_Of_Incident__c",
+      "label": "Frequency Of Incident",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Indicates whether the harassment or assault was a one-time event, repeated, or continuous.",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Single Incident",
+          "label": "Single Incident",
+          "default": false
+        },
+        {
+          "value": "Multiple Incidents",
+          "label": "Multiple Incidents",
+          "default": false
+        },
+        {
+          "value": "Ongoing",
+          "label": "Ongoing",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Full_Time_or_Part_Time__c",
+      "label": "Full Time or Part Time?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you work full time or part time?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Full Time",
+          "label": "Full Time",
+          "default": false
+        },
+        {
+          "value": "Part Time",
+          "label": "Part Time",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Hair_style_Texture__c",
+      "label": "Hair style/Texture",
+      "type": "boolean",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "How_many_employees_did_you_supervise__c",
+      "label": "How many employees did you supervise?",
+      "type": "double",
+      "required": false,
+      "help_text": "Please list the number of employees you supervised.",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Illegal_or_Unethical_Workplace_Conduct__c",
+      "label": "Illegal or Unethical Workplace Conduct?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you ever participate in or witness any unethical or illegal activity during your employment? This could include reporting or witnessing harassment, discrimination, unsafe working conditions, or unethical actions by a coworker, manager, or the company.",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Incident_Type__c",
+      "label": "Incident Type",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Sexual Harassment",
+          "label": "Sexual Harassment",
+          "default": false
+        },
+        {
+          "value": "Sexual Assault",
+          "label": "Sexual Assault",
+          "default": false
+        },
+        {
+          "value": "Both",
+          "label": "Both",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Name",
+      "label": "Intake Name",
+      "type": "string",
+      "required": false,
+      "help_text": null,
+      "length": 80,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Intake_Notes__c",
+      "label": "Intake Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 20000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Interrupted_Meal_Period__c",
+      "label": "Interrupted Meal Period",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Were your meal periods ever interrupted? (You should have a 30-minute uninterrupted (off-duty) meal period for each 6 hours or more of work. (e.g., called back to work early or during the break)?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Interrupted_Meal_Period_Count__c",
+      "label": "Interrupted Meal Period Count",
+      "type": "string",
+      "required": false,
+      "help_text": "Based on the frequency chosen above (daily, weekly, monthly, etc.), how many times did this occur? \r\nEx: If you selected MONTHLY, ask how many times did this happen per MONTH?",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Interrupted_Meal_Period_Frequency__c",
+      "label": "Interrupted Meal Period Frequency",
+      "type": "picklist",
+      "required": false,
+      "help_text": "On AVERAGE, how many times per week were your meal periods interrupted?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Daily",
+          "label": "Daily",
+          "default": false
+        },
+        {
+          "value": "Weekly",
+          "label": "Weekly",
+          "default": false
+        },
+        {
+          "value": "Monthly",
+          "label": "Monthly",
+          "default": false
+        },
+        {
+          "value": "Occasionally",
+          "label": "Occasionally",
+          "default": false
+        },
+        {
+          "value": "Rarely",
+          "label": "Rarely",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "LastModifiedDate",
+      "label": "Last Modified Date",
+      "type": "datetime",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Late_Meal_Period_Count__c",
+      "label": "Late Meal Period Count",
+      "type": "string",
+      "required": false,
+      "help_text": "Based on the frequency chosen above (daily, weekly, monthly, etc.), how many times did this occur?\r\nEx: If you selected MONTHLY, ask how many times did this happen per MONTH?",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Late_Meal_Period_Frequency__c",
+      "label": "Late Meal Period Frequency",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Daily",
+          "label": "Daily",
+          "default": false
+        },
+        {
+          "value": "Weekly",
+          "label": "Weekly",
+          "default": false
+        },
+        {
+          "value": "Monthly",
+          "label": "Monthly",
+          "default": false
+        },
+        {
+          "value": "Occasionally",
+          "label": "Occasionally",
+          "default": false
+        },
+        {
+          "value": "Rarely",
+          "label": "Rarely",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Late_Meal_Periods__c",
+      "label": "Late Meal Periods",
+      "type": "picklist",
+      "required": false,
+      "help_text": "If you were provided a meal period, was it ever taken later than required by law (within 5 hours of the start of your shift)?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Lead__c",
+      "label": "Lead",
+      "type": "reference",
+      "required": false,
+      "help_text": null,
+      "length": 18,
+      "picklist_values": null,
+      "reference_to": [
+        "Lead"
+      ],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Location_of_Incident__c",
+      "label": "Location of Incident",
+      "type": "string",
+      "required": false,
+      "help_text": "The specific location (e.g., office, break room, off-site event) where the incident occurred.",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Meal_Break_Penalties__c",
+      "label": "Meal Break Penalties",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did your employer pay you meal break penalties/pay on your paycheck for each missed, late, or interrupted meal break?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Meal_Period_Complaints__c",
+      "label": "Meal Period Complaints",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you ever make any complaints to a supervisor or management related to improper meal periods (interrupted, taken late, not provided, etc.)",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Meal_Period_Not_Provided__c",
+      "label": "Meal Period Not Provided?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Was there ever a time during your employment where you were NOT able to take your lunch break? (This should be marked as YES even if there was one time that a meal period was not provided).",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Meal_Period_Provided__c",
+      "label": "Meal Period Provided?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Were you provided with a meal period (lunch break) for any shifts you worked that were 6 hours or longer?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Miles_Driven_Per_Week_For_Work__c",
+      "label": "Miles Driven Per Week For Work",
+      "type": "double",
+      "required": false,
+      "help_text": "Estimate the number of miles you drove per week for work purposes. (Commuting to/from work does not count, but driving to multiple job sites or meetings does.)",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Name_s_of_Perpetrator_s__c",
+      "label": "Name(s) of Perpetrator(s)",
+      "type": "string",
+      "required": false,
+      "help_text": "Name(s) of the individual(s) involved in the incident. Include their job title if known.",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "OwnerId",
+      "label": "Owner ID",
+      "type": "reference",
+      "required": false,
+      "help_text": null,
+      "length": 18,
+      "picklist_values": null,
+      "reference_to": [
+        "Group",
+        "User"
+      ],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Position_of_the_Person_You_Spoke_To__c",
+      "label": "Position of the Person You Spoke To",
+      "type": "string",
+      "required": false,
+      "help_text": "The job title of the person you spoke with (e.g., HR Director, Supervisor).",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Reimbursement_Provided__c",
+      "label": "Reimbursement Provided?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you receive reimbursement for ALL personal property that was used for work?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Required_to_Use_Personal_Property__c",
+      "label": "Required to Use Personal Property?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Were you required to use any personal items (e.g., cell phone, vehicle, computer, home) to perform your job duties?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Resignation_Date__c",
+      "label": "Resignation Date",
+      "type": "date",
+      "required": false,
+      "help_text": "What is the official date of your resignation?",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Role_of_Perpetrator_s__c",
+      "label": "Role of Perpetrator(s)",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Specifies the role of the perpetrator(s) in relation to the reporting employee.",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Co-worker",
+          "label": "Co-worker",
+          "default": false
+        },
+        {
+          "value": "Supervisor",
+          "label": "Supervisor",
+          "default": false
+        },
+        {
+          "value": "Manager",
+          "label": "Manager",
+          "default": false
+        },
+        {
+          "value": "Other",
+          "label": "Other",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Second_Meal_Period_10_Hour_Shifts__c",
+      "label": "Second Meal Period (10+ Hour Shifts)",
+      "type": "picklist",
+      "required": false,
+      "help_text": "For any shifts over 10 hours, were you provided with a second uninterrupted meal period?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Settlement_Authority__c",
+      "label": "Settlement Authority",
+      "type": "currency",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Sexual_Harassment_Assault__c",
+      "label": "Sexual Harassment/Assault",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you ever experience sexual harassment or assault during your employment?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Sign_Regarding_Minimum_Wage_Laws__c",
+      "label": "Sign Regarding Minimum Wage Laws?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did your employer have posted signs regarding minimum wage laws and other California Labor Laws?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unsure",
+          "label": "Unsure",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Time_Period_for_Medical_Family_Leave__c",
+      "label": "Time Period for Medical/Family Leave",
+      "type": "string",
+      "required": false,
+      "help_text": "The start and end dates for the medical or family leave you requested or took.",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Time_Period_for_Sick_Leave__c",
+      "label": "Time Period for Sick Leave",
+      "type": "string",
+      "required": false,
+      "help_text": "The start and end dates of the sick leave you requested or took.",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Typical_Shift_End_Time__c",
+      "label": "Typical Shift End Time",
+      "type": "time",
+      "required": false,
+      "help_text": "What time did your work shift typically end (e.g., 4:00 PM)?",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Typical_Shift_Start_Time__c",
+      "label": "Typical Shift Start Time",
+      "type": "time",
+      "required": false,
+      "help_text": "What time did your work shift typically start (e.g., 8:00 AM)?",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Vehicle_Use_for_Job_Duties__c",
+      "label": "Vehicle Use for Job Duties",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you use your vehicle for work duties, such as driving to different locations during your workday (excluding commuting)",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Was_There_Any_Proof_of_the_Issue__c",
+      "label": "Was There Any Proof of the Issue?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you have evidence to support your report (e.g., emails, texts, witnesses)?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Was_the_Sick_Leave_Approved__c",
+      "label": "Was the Sick Leave Approved?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Were you allowed to take the sick leave as requested?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Were_There_Variations_to_Work_Schedule__c",
+      "label": "Were There Ever Changes To The Schedule?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did your work schedule change frequently (e.g., shift changes, on-call)?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "When_Did_You_Report_It__c",
+      "label": "When Did You Report It?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "The date or approximate time you reported the issue.",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Who_Did_You_Speak_To_About_Leave_Request__c",
+      "label": "Who Did You Speak To About Leave Request",
+      "type": "string",
+      "required": false,
+      "help_text": "The name or position of the person you talked to about your leave (e.g., HR, manager).",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Who_Was_Involved_in_the_Reported_Issue__c",
+      "label": "Who Was Involved in the Reported Issue?",
+      "type": "string",
+      "required": false,
+      "help_text": "Name or role of the person(s) involved (e.g., coworker, supervisor).",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Work_More_Than_10_Hours__c",
+      "label": "Work More Than 10 Hours",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you ever work any shifts for longer than 10 hours?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "W__c",
+      "label": "Work More Than 10 Hours Daily Frequency",
+      "type": "string",
+      "required": false,
+      "help_text": "On AVERAGE, how many times during your entire employment did you work more than 10 hours per day?",
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "System Information"
+    },
+    {
+      "api_name": "Date_Final_Paycheck_Received__c",
+      "label": "Date Final Paycheck Received",
+      "type": "date",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Termination Details"
+    },
+    {
+      "api_name": "Did_you_receive_your_final_paycheck__c",
+      "label": "Did you receive your final paycheck?",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Not Yet",
+          "label": "Not Yet",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Termination Details"
+    },
+    {
+      "api_name": "Employer_Reason_For_Termination__c",
+      "label": "Employer Reason For Termination",
+      "type": "textarea",
+      "required": false,
+      "help_text": "What was the reason your employer gave for firing you?",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Termination Details"
+    },
+    {
+      "api_name": "Severance_Agreement__c",
+      "label": "Severance Agreement",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you sign a severance agreement? \r\n\r\nEx: A severance agreement is a legal contract between an employer and employee that details the terms of the employee's termination. This type of agreement typically protects the company from lawsuits by releasing the employee from claims against their employer. This can typically also include severance pay as a bonus.",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unknown",
+          "label": "Unknown",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Termination Details"
+    },
+    {
+      "api_name": "Severance_Under_Duress__c",
+      "label": "Severance Under Duress",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Do you feel as though you were forced to sign this severance agreement? Were you aware that you were signing a severance agreement? \r\n\r\nEx: Sign or you don't get your final paycheck",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Termination Details"
+    },
+    {
+      "api_name": "Termination_Date__c",
+      "label": "Termination Date",
+      "type": "date",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Termination Details"
+    },
+    {
+      "api_name": "Were_you_fired_or_did_you_resign__c",
+      "label": "Were you fired or did you resign?",
+      "type": "picklist",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Fired",
+          "label": "Fired",
+          "default": false
+        },
+        {
+          "value": "Laid-off",
+          "label": "Laid-off",
+          "default": false
+        },
+        {
+          "value": "Resigned",
+          "label": "Resigned",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Termination Details"
+    },
+    {
+      "api_name": "Why_do_YOU_believe_you_were_terminated__c",
+      "label": "Why do you believe you were terminated?",
+      "type": "textarea",
+      "required": false,
+      "help_text": "What are the reasons YOU believe you were terminated?",
+      "length": 5000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": "Termination Details"
+    },
+    {
+      "api_name": "Bonus_compensation_or_commissions__c",
+      "label": "Bonus compensation or commissions?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Were you eligible for any bonus compensation or commissions in the last year?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unsure",
+          "label": "Unsure",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Wage And Hour Claims"
+    },
+    {
+      "api_name": "How_did_you_receive_payment__c",
+      "label": "How did you receive payment?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "How were you paid by your employer?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Direct Deposit",
+          "label": "Direct Deposit",
+          "default": false
+        },
+        {
+          "value": "Check",
+          "label": "Check",
+          "default": false
+        },
+        {
+          "value": "Cash",
+          "label": "Cash",
+          "default": false
+        },
+        {
+          "value": "Other",
+          "label": "Other",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Wage And Hour Claims"
+    },
+    {
+      "api_name": "Pay_Frequency__c",
+      "label": "Pay Frequency",
+      "type": "picklist",
+      "required": false,
+      "help_text": "How often were you paid by your employer?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Bi-Weekly",
+          "label": "Bi-Weekly",
+          "default": false
+        },
+        {
+          "value": "Weekly",
+          "label": "Weekly",
+          "default": false
+        },
+        {
+          "value": "Monthly",
+          "label": "Monthly",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Wage And Hour Claims"
+    },
+    {
+      "api_name": "Paystubs__c",
+      "label": "Paystubs",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did your employer give you access to itemized paystubs?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unsure",
+          "label": "Unsure",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Wage And Hour Claims"
+    },
+    {
+      "api_name": "W2_Form__c",
+      "label": "W2 Form",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did your employer issue you an I.R.S. Form W-2 at the conclusion of the last tax year?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unsure",
+          "label": "Unsure",
+          "default": false
+        },
+        {
+          "value": "Not applicable",
+          "label": "Not applicable",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Wage And Hour Claims"
+    },
+    {
+      "api_name": "W4_Form__c",
+      "label": "W4 Form",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you fill out an I.R.S. Form W-4 at the start of your employment?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unsure",
+          "label": "Unsure",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Wage And Hour Claims"
+    },
+    {
+      "api_name": "Key_Witnesses__c",
+      "label": "Key Witnesses?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Do you have any people who can be key witnesses to your case? This can include friends, family, prior co-workers, prior employees, or current employees. Please note that witnesses have the option to remain completely anonymous.",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Not At The Moment",
+          "label": "Not At The Moment",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Witnesses"
+    },
+    {
+      "api_name": "What_is_your_work_schedule__c",
+      "label": "What is your work schedule?",
+      "type": "multipicklist",
+      "required": false,
+      "help_text": "Select all the days of the week that you typically worked.",
+      "length": 4099,
+      "picklist_values": [
+        {
+          "value": "Monday",
+          "label": "Monday",
+          "default": false
+        },
+        {
+          "value": "Tuesday",
+          "label": "Tuesday",
+          "default": false
+        },
+        {
+          "value": "Wednesday",
+          "label": "Wednesday",
+          "default": false
+        },
+        {
+          "value": "Thursday",
+          "label": "Thursday",
+          "default": false
+        },
+        {
+          "value": "Friday",
+          "label": "Friday",
+          "default": false
+        },
+        {
+          "value": "Saturday",
+          "label": "Saturday",
+          "default": false
+        },
+        {
+          "value": "Sunday",
+          "label": "Sunday",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Work Schedule"
+    },
+    {
+      "api_name": "Bankruptcy__c",
+      "label": "Bankruptcy",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Have you ever filed for bankruptcy?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Workplace Discipline"
+    },
+    {
+      "api_name": "Demotions__c",
+      "label": "Demotions",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you receive any demotions during your employment?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Workplace Discipline"
+    },
+    {
+      "api_name": "Felony__c",
+      "label": "Felony",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Have you ever been convicted of a felony?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Workplace Discipline"
+    },
+    {
+      "api_name": "Write_Ups__c",
+      "label": "Write-Ups",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you receive any write-ups during your employment?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": "Workplace Discipline"
+    },
+    {
+      "api_name": "Date_Of_Accident__c",
+      "label": "Date Of Accident",
+      "type": "date",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Date_Of_Termination_2__c",
+      "label": "Date Of Termination",
+      "type": "date",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Description_Of_Accident__c",
+      "label": "Description Of Accident",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 25000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Emergency_Contact_Name__c",
+      "label": "Emergency Contact Name",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Medicare_Medical__c",
+      "label": "Medicare / Medi-cal ?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Are you currently enrolled in Medicare or Medi-cal?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Monthly_Child_Support_Amount__c",
+      "label": "Monthly Child Support Amount",
+      "type": "currency",
+      "required": false,
+      "help_text": "Please list the amount you pay MONTHLY for child support.",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Monthly_Child_Support__c",
+      "label": "Monthly Child Support?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Do you currently pay monthly child support?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Outstanding_Child_Support_Balance__c",
+      "label": "Outstanding Child Support Balance?",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Do you have an outstanding child support balance? NOTE: This should not affect a client pursuing WC Claim. Will only need to be discussed during time of settlement if reached.",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Overtime_Hours__c",
+      "label": "Overtime Hours",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you ever work more than 8 hours in a day or more than 40 hours per week?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Overtime_Hours_Notes__c",
+      "label": "Overtime Hours Notes",
+      "type": "textarea",
+      "required": false,
+      "help_text": null,
+      "length": 3000,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Owner_Full_Name__c",
+      "label": "Owner Full Name",
+      "type": "string",
+      "required": false,
+      "help_text": null,
+      "length": 255,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "SSN__c",
+      "label": "SSN",
+      "type": "double",
+      "required": false,
+      "help_text": null,
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Start_Date_of_Medicare_Medi_cal__c",
+      "label": "Start Date of Medicare/Medi-cal",
+      "type": "date",
+      "required": false,
+      "help_text": "When did you start receiving medicare or medical?",
+      "length": 0,
+      "picklist_values": null,
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Unpaid_Overtime__c",
+      "label": "Unpaid Overtime",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Were you ever not paid wages for overtime worked for your employer?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        },
+        {
+          "value": "Unsure",
+          "label": "Unsure",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": null
+    },
+    {
+      "api_name": "Unpaid_Overtime_Hours_Complaint__c",
+      "label": "Unpaid Overtime Hours Complaint",
+      "type": "picklist",
+      "required": false,
+      "help_text": "Did you ever complain to a manager or supervisor regarding your unpaid overtime hours?",
+      "length": 255,
+      "picklist_values": [
+        {
+          "value": "Yes",
+          "label": "Yes",
+          "default": false
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "default": false
+        }
+      ],
+      "reference_to": [],
+      "section": null
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: ai_voice_postgres
+    environment:
+      POSTGRES_USER: ai_voice
+      POSTGRES_PASSWORD: ai_voice_password
+      POSTGRES_DB: ai_voice
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ai_voice"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ai_voice_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: ai_voice_redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ai_voice_network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai_voice_app
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8000
+      DEBUG: "false"
+      ENVIRONMENT: production
+      DATABASE_URL: postgresql://ai_voice:ai_voice_password@postgres:5432/ai_voice
+      REDIS_URL: redis://redis:6379/0
+      DEEPGRAM_API_KEY: ${DEEPGRAM_API_KEY}
+      AWS_REGION: ${AWS_REGION:-us-west-2}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_BEDROCK_MODEL_ID: ${AWS_BEDROCK_MODEL_ID:-deepseek.deepseek-r1-distill-qwen-32b}
+      TWILIO_ACCOUNT_SID: ${TWILIO_ACCOUNT_SID:-}
+      TWILIO_AUTH_TOKEN: ${TWILIO_AUTH_TOKEN:-}
+      TWILIO_PHONE_NUMBER: ${TWILIO_PHONE_NUMBER:-}
+      SF_CLIENT_ID: ${SF_CLIENT_ID:-}
+      SF_CLIENT_SECRET: ${SF_CLIENT_SECRET:-}
+      SF_REFRESH_TOKEN: ${SF_REFRESH_TOKEN:-}
+      SF_INSTANCE_URL: ${SF_INSTANCE_URL:-}
+      SECRET_KEY: ${SECRET_KEY:-change-this-secret-key-in-production}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000,http://localhost:8000}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      LOG_FORMAT: json
+      MAX_CALL_DURATION_SECONDS: ${MAX_CALL_DURATION_SECONDS:-7200}
+      CALL_RECORDING_ENABLED: ${CALL_RECORDING_ENABLED:-true}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./calls:/app/calls
+      - ./intake_questions.json:/app/intake_questions.json:ro
+      - ./intake_questions_by_section.json:/app/intake_questions_by_section.json:ro
+      - ./intake_with_sections.json:/app/intake_with_sections.json:ro
+    restart: unless-stopped
+    networks:
+      - ai_voice_network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      start_period: 40s
+      retries: 3
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  ai_voice_network:
+    driver: bridge
